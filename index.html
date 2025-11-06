@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Untitled</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
 <meta charset="UTF-8">
 <title>Happy Anniversary 💖</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sarabun:wght@500&display=swap" rel="stylesheet">
 <style>
   body {
     margin: 0;
     overflow: hidden;
     background-color: #fff0f6;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Sarabun', sans-serif;
     text-align: center;
   }
-  /* Intro */
   .intro {
     position: absolute;
     inset: 0;
@@ -36,12 +24,17 @@
   }
   .intro h1 {
     color: #ff3366;
-    font-size: 60px;
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+  .intro p {
+    color: #ff6699;
+    font-size: 26px;
     margin-bottom: 20px;
   }
   .intro button {
-    font-family: 'Dancing Script', cursive;
-    font-size: 28px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 24px;
     background-color: #ff6699;
     color: white;
     border: none;
@@ -49,12 +42,11 @@
     border-radius: 25px;
     cursor: pointer;
   }
-
-  /* Main */
   h1 {
     color: #ff3366;
-    font-size: 56px;
+    font-size: 48px;
     margin-top: 30px;
+    font-family: 'Dancing Script', cursive;
   }
   .heart {
     position: absolute;
@@ -68,12 +60,19 @@
     animation: fadeIn 3s ease forwards;
   }
   .message {
-    font-size: 48px;
+    font-size: 44px;
     color: #e60073;
     margin-top: 150px;
+    font-family: 'Dancing Script', cursive;
+  }
+  .message-th {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 28px;
+    color: #ff6699;
+    margin-top: 10px;
   }
   .sub-message {
-    font-size: 36px;
+    font-size: 28px;
     color: #ff6699;
     margin-top: 20px;
   }
@@ -105,8 +104,8 @@
   #hugBtn {
     display: none;
     margin-top: 40px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 28px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 26px;
     background-color: #ff6699;
     color: white;
     border: none;
@@ -128,14 +127,18 @@
 <!-- Intro -->
 <div class="intro">
   <h1>Click to start our Anniversary Journey 💖</h1>
-  <button onclick="startGame()">Start</button>
+  <p>คลิกเพื่อเริ่มการเดินทางแห่งความรักของเรา 💕</p>
+  <button onclick="startGame()">เริ่มเลย / Start</button>
 </div>
 
 <!-- Game -->
-<h1 id="mainTitle" style="display:none;">Find all 5 hidden hearts 💘</h1>
+<h1 id="mainTitle" style="display:none;">Find all 5 hidden hearts 💘<br><span style="font-family:'Sarabun'; font-size:26px; color:#ff6699;">หาหัวใจทั้ง 5 ดวงให้ครบสิ 💖</span></h1>
+
 <div class="message">💞 Happy Anniversary My Love 💞</div>
+<div class="message-th">สุขสันต์วันครบรอบความรักของเรา 💖</div>
+
 <div class="sub-message"></div>
-<button id="hugBtn">🤗 Hug Me</button>
+<button id="hugBtn">🤗 กอดหน่อยสิ / Hug Me</button>
 <img src="Messenger_creation_F9C4419F-1E4A-4B3D-9CEE-49309D3F8F45 (2).jpeg" class="couple-photo">
 <audio id="bgMusic" src="https://cdn.pixabay.com/download/audio/2021/09/09/audio_7d4b5860f9.mp3?filename=romantic-piano-127243.mp3" loop></audio>
 
@@ -175,6 +178,7 @@ function createHearts() {
 function showCelebration() {
   document.getElementById('mainTitle').style.display = 'none';
   document.querySelector('.message').style.display = 'block';
+  document.querySelector('.message-th').style.display = 'block';
   document.body.animate([
     { backgroundColor: '#fff0f6' },
     { backgroundColor: '#ffe6f2' },
@@ -189,7 +193,7 @@ function showCelebration() {
   setTimeout(() => {
     document.getElementById('hugBtn').style.display = 'block';
     document.getElementById('hugBtn').onclick = () =>
-      alert('You got a virtual hug from Thanaphat! 💞');
+      alert('คุณได้รับอ้อมกอดจาก Thanaphat แล้วนะ 🤗💞');
   }, 4000);
 
   setTimeout(() => {
@@ -244,8 +248,4 @@ function typeText(el, text, speed = 100) {
 }
 </script>
 </body>
-</html>
-    
-  </body>
-  
 </html>
